@@ -1,1 +1,1 @@
-ls -tUpm
+ls -mtUp
