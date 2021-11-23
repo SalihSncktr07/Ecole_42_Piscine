@@ -1,1 +1,3 @@
-git log --format='%H' -n5
+git log --pretty=%H | head -n 5
+
+
