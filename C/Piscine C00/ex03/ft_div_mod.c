@@ -1,19 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   t_main.c                                           :+:      :+:    :+:   */
+/*   ft_div_mod.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spirnaz <42istanbul.com.tr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/30 02:13:52 by spirnaz           #+#    #+#             */
-/*   Updated: 2021/11/30 02:14:17 by spirnaz          ###   ########.fr       */
+/*   Created: 2021/11/30 23:04:44 by spirnaz           #+#    #+#             */
+/*   Updated: 2021/11/30 23:05:23 by spirnaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_print_numbers(void);
-
-int	main(void)
+void	ft_div_mod(int a, int b, int *div, int *mod)
 {
-	ft_print_numbers();
-	return (0);
+	if (!(b == 0))
+	{	
+		*mod = a % b;
+		*div = a / b;
+	}
 }

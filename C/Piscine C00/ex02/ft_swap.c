@@ -1,29 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_reverse_alphabet.c                        :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spirnaz <42istanbul.com.tr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/25 22:33:34 by spirnaz           #+#    #+#             */
-/*   Updated: 2021/11/30 02:06:18 by spirnaz          ###   ########.fr       */
+/*   Created: 2021/11/30 22:57:01 by spirnaz           #+#    #+#             */
+/*   Updated: 2021/11/30 23:02:28 by spirnaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
 
-void	ft_putchar(char c)
+void	ft_swap(int *a, int *b)
 {
-	write(1, &c, 1);
-}
+	int	x;
 
-void	ft_print_reverse_alphabet(void)
-{
-	char	r_alphabet;
-
-	r_alphabet = 'z';
-	while (r_alphabet >= 'a')
-	{
-		ft_putchar(r_alphabet);
-		r_alphabet--;
-	}
+	x = *a;
+	*a = *b;
+	*b = x;
 }

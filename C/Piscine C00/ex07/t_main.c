@@ -5,17 +5,34 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: spirnaz <42istanbul.com.tr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/30 02:34:30 by spirnaz           #+#    #+#             */
-/*   Updated: 2021/11/30 03:27:34 by spirnaz          ###   ########.fr       */
+/*   Created: 2021/12/02 14:57:18 by spirnaz           #+#    #+#             */
+/*   Updated: 2021/12/02 14:57:34 by spirnaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putnbr(int nb);
+#include <stdio.h>
+ 
+void	ft_rev_int_tab(int *tab, int size);
 
-int	main(void)
+void putarr(int arr[], int size)
 {
-	int	nb;
+    for (int i = 0; i < (size -1); i++)
+        printf("%d, ", arr[i]);
+    printf("%d\n", arr[size - 1]);
+}
 
-	nb = 64;
-	ft_putnbr(nb);
+int		main (void)
+{
+	int tab[] = {1, 2, 3, 4};
+	int size;
+	
+	size = 4;
+
+	printf("Original: ");
+	putarr(tab, size);
+
+	ft_rev_int_tab(tab, size);
+
+	printf("Modified: ");
+	putarr(tab, size);
 }

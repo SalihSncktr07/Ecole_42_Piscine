@@ -1,48 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_comb.c                                    :+:      :+:    :+:   */
+/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spirnaz <42istanbul.com.tr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/30 02:21:55 by spirnaz           #+#    #+#             */
-/*   Updated: 2021/11/30 02:25:54 by spirnaz          ###   ########.fr       */
+/*   Created: 2021/11/30 23:06:20 by spirnaz           #+#    #+#             */
+/*   Updated: 2021/12/01 00:21:07 by spirnaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_num(char a, char b, char c)
+void	ft_ultimate_div_mod(int *a, int *b)
 {
-	write(1, &a, 1);
-	write(1, &b, 1);
-	write(1, &c, 1);
-	if (a != '7' || b != '8' || c != '9')
-	{
-		write(1, ", ", 2);
-	}
-}
+	int	x;
+	int	y;
 
-void	ft_print_comb(void)
-{
-	char	d;
-	char	e;
-	char	f;
-
-	d = '0';
-	while (d <= '7')
+	if (!(*b == 0))
 	{
-		e = d + 1;
-		while (e <= '8')
-		{
-			f = e + 1;
-			while (f <= '9')
-			{
-				ft_num(d, e, f);
-				f++;
-			}
-			e++;
-		}
-		d++;
+		x = (*a) / (*b);
+		y = (*a) / (*b);
+		*b = y;
+		*a = x;
 	}
 }

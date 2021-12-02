@@ -1,19 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   t_main.c                                           :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spirnaz <42istanbul.com.tr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/29 19:01:02 by spirnaz           #+#    #+#             */
-/*   Updated: 2021/11/29 19:33:37 by spirnaz          ###   ########.fr       */
+/*   Created: 2021/12/01 00:25:10 by spirnaz           #+#    #+#             */
+/*   Updated: 2021/12/01 00:25:56 by spirnaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_print_alphabet(void);
+#include <unistd.h>
 
-int	main(void)
+void	ft_putchar(char c)
 {
-	ft_print_alphabet();
-	return (0);
+	write(1, &c, 1);
+}
+
+void	ft_putstr(char *str)
+{
+	unsigned int	sayac;
+
+	sayac = 0;
+	while (str[sayac] != '\0')
+	{
+		ft_putchar(str[sayac]);
+		sayac++;
+	}
 }

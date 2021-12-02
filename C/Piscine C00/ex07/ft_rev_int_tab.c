@@ -1,30 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_rev_int_tab                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spirnaz <42istanbul.com.tr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/30 02:12:33 by spirnaz           #+#    #+#             */
-/*   Updated: 2021/11/30 02:14:50 by spirnaz          ###   ########.fr       */
+/*   Created: 2021/12/02 14:55:39 by spirnaz           #+#    #+#             */
+/*   Updated: 2021/12/02 14:56:03 by spirnaz          ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
+void	ft_rev_int_tab(int *tab, int size)
 {
-	write(1, &c, 1);
-}
+	int index;
+	int c;
+	int aux[size];
 
-void	ft_print_numbers(void)
-{
-	char	num;
-
-	num = '0';
-	while (num <= '9')
+	c = 0;
+	index = size - 1;
+	while (index >= 0)
 	{
-		ft_putchar(num);
-		num++;
+		aux[c] = tab[index];
+		index--;
+		c++;
+	}
+	c = 0;
+	while (c < size)
+	{
+		tab[c] = aux[c];
+		c++;
 	}
 }
