@@ -5,17 +5,15 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: spirnaz <42istanbul.com.tr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/30 02:34:30 by spirnaz           #+#    #+#             */
-/*   Updated: 2021/11/30 03:27:34 by spirnaz          ###   ########.fr       */
+/*   Created: 2021/11/30 02:17:17 by spirnaz           #+#    #+#             */
+/*   Updated: 2021/11/30 02:19:10 by spirnaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putnbr(int nb);
+void	ft_is_negative(int n);
 
 int	main(void)
 {
-	int	nb;
-
-	nb = 64;
-	ft_putnbr(nb);
+	ft_is_negative(-2);
+	return (0);
 }

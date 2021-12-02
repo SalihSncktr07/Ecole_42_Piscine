@@ -1,21 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   t_main.c                                           :+:      :+:    :+:   */
+/*   ft_is_negative.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spirnaz <42istanbul.com.tr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/30 02:34:30 by spirnaz           #+#    #+#             */
-/*   Updated: 2021/11/30 03:27:34 by spirnaz          ###   ########.fr       */
+/*   Created: 2021/11/30 02:16:15 by spirnaz           #+#    #+#             */
+/*   Updated: 2021/11/30 02:16:17 by spirnaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putnbr(int nb);
+#include <unistd.h>
 
-int	main(void)
+void	ft_is_negative(int n)
 {
-	int	nb;
+	char	poz;
+	char	neg;
 
-	nb = 64;
-	ft_putnbr(nb);
+	poz = 'P';
+	neg = 'N';
+	if (n >= 0)
+	{
+		write(1, &poz, 1);
+	}
+	else
+	{
+		write(1, &neg, 1);
+	}
 }

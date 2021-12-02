@@ -1,21 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   t_main.c                                           :+:      :+:    :+:   */
+/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spirnaz <42istanbul.com.tr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/30 02:34:30 by spirnaz           #+#    #+#             */
-/*   Updated: 2021/11/30 03:27:34 by spirnaz          ###   ########.fr       */
+/*   Created: 2021/11/29 18:59:16 by spirnaz           #+#    #+#             */
+/*   Updated: 2021/11/30 01:46:51 by spirnaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putnbr(int nb);
+#include <unistd.h>
 
-int	main(void)
+void	ft_putchar(char c)
 {
-	int	nb;
+	write(1, &c, 1);
+}
 
-	nb = 64;
-	ft_putnbr(nb);
+void	ft_print_alphabet(void)
+{
+	char	alphabet;
+
+	alphabet = 'a';
+	while (alphabet <= 'z')
+	{
+		ft_putchar(alphabet);
+		alphabet++;
+	}
 }

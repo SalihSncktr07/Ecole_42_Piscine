@@ -1,33 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spirnaz <42istanbul.com.tr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/01 00:44:04 by spirnaz           #+#    #+#             */
-/*   Updated: 2021/12/01 00:48:20 by spirnaz          ###   ########.fr       */
+/*   Created: 2021/11/29 16:10:55 by spirnaz           #+#    #+#             */
+/*   Updated: 2021/11/29 16:11:58 by spirnaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include <unistd.h>
-#include <stdbool.h>
-#include <stdio.h>
 
-int	ft_strlen(char *str)
+void	ft_putchar(char c)
 {
-	int		count;
-	char	nex_char;
-
-	count = 0;
-	while (true)
-	{
-		next_char = *str;
-		if (next_char == '\0')
-		{
-			return (count);
-		}
-		count += 1;
-		str++;
-	}
+	write(1, &c, 1);
 }
