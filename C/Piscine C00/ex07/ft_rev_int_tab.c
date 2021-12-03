@@ -1,40 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   t_main.c                                           :+:      :+:    :+:   */
+/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fcicek <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/30 15:32:14 by fcicek            #+#    #+#             */
-/*   Updated: 2021/12/01 15:56:59 by fcicek           ###   ########.fr       */
+/*   Created: 2021/11/30 15:29:46 by fcicek            #+#    #+#             */
+/*   Updated: 2021/12/01 15:55:34 by fcicek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-void	ft_rev_int_tab(int *tab, int size);
-
-void	putarr(int *tab, int size)
+void	ft_rev_int_tab(int *tab, int size)
 {
-	int	i;
+	int	c;
+	int	s;
+	int	d;
 
-	i = 0;
-	while (i < size)
+	d = size - 1;
+	s = 0;
+	while (s < size / 2)
 	{
-		printf("%d, ", tab[i]);
-		i++;
+		c = tab[s];
+		tab[s] = tab[d];
+		tab[d] = c;
+		d--;
+		s++;
 	}
-}
-
-int	main(void)
-{
-	int	size;
-	int	tab[] = {1, 2, 3, 4};
-
-	size = 4;
-	printf("Orijinal: ");
-	putarr(tab, size);
-	ft_rev_int_tab(tab, size);
-	printf("donmus: ");
-	putarr(tab, size);
 }

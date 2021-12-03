@@ -1,40 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   t_main.c                                           :+:      :+:    :+:   */
+/*   ft_sort_int_tab.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fcicek <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/30 15:32:14 by fcicek            #+#    #+#             */
-/*   Updated: 2021/12/01 15:56:59 by fcicek           ###   ########.fr       */
+/*   Created: 2021/12/01 10:30:18 by fcicek            #+#    #+#             */
+/*   Updated: 2021/12/01 11:13:45 by fcicek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-void	ft_rev_int_tab(int *tab, int size);
-
-void	putarr(int *tab, int size)
+void	ft_swap(int *a, int *b)
 {
+	int	t;
+
+	t = *a;
+	*a = *b;
+	*b = t;
+}
+
+void	ft_sort_int_tab(int *tab, int size)
+{
+	int	j;
 	int	i;
 
 	i = 0;
 	while (i < size)
 	{
-		printf("%d, ", tab[i]);
+		j = 0;
+		while (j < size)
+		{
+			if (tab[i] < tab[j])
+				ft_swap(&tab[i], &tab[j]);
+			j++;
+		}
 		i++;
 	}
-}
-
-int	main(void)
-{
-	int	size;
-	int	tab[] = {1, 2, 3, 4};
-
-	size = 4;
-	printf("Orijinal: ");
-	putarr(tab, size);
-	ft_rev_int_tab(tab, size);
-	printf("donmus: ");
-	putarr(tab, size);
 }
