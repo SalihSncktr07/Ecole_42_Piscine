@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sort_int_tab.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sikaya <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: spirnaz <42istanbul.com.tr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/04 19:15:25 by sikaya            #+#    #+#             */
-/*   Updated: 2021/12/04 19:56:06 by sikaya           ###   ########.fr       */
+/*   Created: 2021/12/04 23:58:40 by spirnaz           #+#    #+#             */
+/*   Updated: 2021/12/04 23:59:19 by spirnaz          ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <unistd.h>
 
 void	ft_swap(int *a, int *b)
