@@ -9,25 +9,20 @@
 /*   Updated: 2021/12/02 14:56:03 by spirnaz          ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <unistd.h>
 
 void	ft_rev_int_tab(int *tab, int size)
 {
-	int index;
-	int c;
-	int aux[size];
+	int	tmp;
+	int	i;
 
-	c = 0;
-	index = size - 1;
-	while (index >= 0)
+	i = 0;
+	while (i < size - 1)
 	{
-		aux[c] = tab[index];
-		index--;
-		c++;
-	}
-	c = 0;
-	while (c < size)
-	{
-		tab[c] = aux[c];
-		c++;
+		tmp = tab[i];
+		tab[i] = tab[size - 1];
+		tab[size - 1] = tmp;
+		size--;
+		i++;
 	}
 }

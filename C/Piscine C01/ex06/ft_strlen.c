@@ -11,23 +11,15 @@
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdbool.h>
-#include <stdio.h>
 
 int	ft_strlen(char *str)
 {
-	int		count;
-	char	nex_char;
+	int	sayac;
 
-	count = 0;
-	while (true)
+	sayac = 0;
+	while (str[sayac] != '\0')
 	{
-		next_char = *str;
-		if (next_char == '\0')
-		{
-			return (count);
-		}
-		count += 1;
-		str++;
+		sayac++;
 	}
+	return (sayac);
 }

@@ -12,7 +12,7 @@
 
 #include <unistd.h>
 
-void	ft_ft(int *prmtr)
+void	ft_ft(int *nbr)
 {
-	*prmtr = 42;
+	*nbr = 42;
 }
