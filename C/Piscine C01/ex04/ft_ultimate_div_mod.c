@@ -18,7 +18,7 @@ void	ft_ultimate_div_mod(int *a, int *b)
 	if (!(*b == 0))
 	{
 		x = (*a) / (*b);
-		y = (*a) / (*b);
+		y = (*a) % (*b);
 		*b = y;
 		*a = x;
 	}
