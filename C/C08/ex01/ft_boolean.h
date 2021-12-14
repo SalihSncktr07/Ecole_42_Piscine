@@ -1,23 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_fibonacci.c                                     :+:      :+:    :+:   */
+/*   ft_boolean.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spirnaz <42istanbul.com.tr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/12 00:51:04 by spirnaz           #+#    #+#             */
-/*   Updated: 2021/12/12 00:52:06 by spirnaz          ###   ########.tr       */
+/*   Created: 2021/12/14 13:10:54 by spirnaz           #+#    #+#             */
+/*   Updated: 2021/12/14 13:19:37 by spirnaz          ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_fibonacci(int index)
-{
-	if (index < 0)
-		return (-1);
-	if (index < 2)
-		return (index);
-	return (ft_fibonacci(index - 2) + ft_fibonacci(index - 1));
-}
-0 1 1 2 3 5 8
+#ifndef FT_BOOLEAN_H
+# define FT_BOOLEAN_H
 
+# include <unistd.h>
 
+typedef enum a_bool{
+	false = 0,
+	true = 1,
+}	t_bool;
+
+# define FALSE false
+# define TRUE true
+# define EVEN(number) (number % 2 == 0)
+# define EVEN_MSG "I have an even number of arguments.\n"
+# define ODD_MSG "I have an odd number of arguments.\n"
+# define SUCCESS 0
+#endif

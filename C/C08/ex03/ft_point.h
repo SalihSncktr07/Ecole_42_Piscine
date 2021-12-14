@@ -1,23 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_fibonacci.c                                     :+:      :+:    :+:   */
+/*   ft_point.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spirnaz <42istanbul.com.tr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/12 00:51:04 by spirnaz           #+#    #+#             */
-/*   Updated: 2021/12/12 00:52:06 by spirnaz          ###   ########.tr       */
+/*   Created: 2021/12/14 14:41:12 by spirnaz           #+#    #+#             */
+/*   Updated: 2021/12/14 14:53:41 by spirnaz          ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_fibonacci(int index)
+#ifndef FT_POINT_H
+# define FT_POINT_H
+
+typedef struct s_point
 {
-	if (index < 0)
-		return (-1);
-	if (index < 2)
-		return (index);
-	return (ft_fibonacci(index - 2) + ft_fibonacci(index - 1));
-}
-0 1 1 2 3 5 8
+	int	x;
+	int	y;
+}				t_point;
 
-
+#endif
