@@ -1,0 +1,4 @@
+ln test3 test5
+ln -f test0 test6
+touch -h -t 777 test6
+tar -cf exo2.tar *
