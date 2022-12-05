@@ -1,7 +1,5 @@
 # 42header
 
-Teşekkürler: Öner Morkoç Onur Dursun
-
 # Kurulum Talimatları
 
 1)Yeşil code butonuna tıklayınız
