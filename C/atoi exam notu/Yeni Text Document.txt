@@ -1,0 +1,1 @@
+exam sınavında itediği farklı, bir eksi '-' konlabilir bu yüzden while yerine if demem lazım.
